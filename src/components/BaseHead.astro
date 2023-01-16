@@ -206,3 +206,17 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 	href="favicons/apple-splash-1136-640.jpg"
 	media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
 />
+
+<script>
+	if (navigator.serviceWorker.controller) {
+		console.log("Active service worker found");
+	} else {
+		navigator.serviceWorker
+			.register("sw.js", {
+				scope: "./",
+			})
+			.then(function (reg) {
+				console.log("Service worker  registered");
+			});
+	}
+</script>
