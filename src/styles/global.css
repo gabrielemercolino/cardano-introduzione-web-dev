@@ -39,6 +39,7 @@ b {
 }
 a {
 	color: #3273dc;
+	text-decoration: none;
 }
 nav a {
 	margin-right: 10px;
