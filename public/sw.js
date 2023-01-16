@@ -1,0 +1,42 @@
+// https://medium.com/samsung-internet-dev/pwa-series-service-workers-the-basics-about-offline-a6e8f1d92dfd
+
+// Perform install steps
+let CACHE_NAME = "cardano-web-dev-cache";
+let urlsToCache = [];
+
+self.addEventListener("install", function (event) {
+	// Perform install steps
+	event.waitUntil(
+		caches.open(CACHE_NAME).then(function (cache) {
+			console.log("Opened cache");
+			return cache.addAll(urlsToCache);
+		})
+	);
+});
+
+self.addEventListener("fetch", function (event) {
+	event.respondWith(
+		caches.match(event.request).then(function (response) {
+			// Cache hit - return response
+			if (response) {
+				return response;
+			}
+			return fetch(event.request);
+		})
+	);
+});
+
+self.addEventListener("activate", function (event) {
+	var cacheWhitelist = ["pigment"];
+	event.waitUntil(
+		caches.keys().then(function (cacheNames) {
+			return Promise.all(
+				cacheNames.map(function (cacheName) {
+					if (cacheWhitelist.indexOf(cacheName) === -1) {
+						return caches.delete(cacheName);
+					}
+				})
+			);
+		})
+	);
+});
