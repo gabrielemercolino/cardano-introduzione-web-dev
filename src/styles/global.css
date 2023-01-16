@@ -5,15 +5,27 @@
  */
 body {
 	font-family: Verdana, sans-serif;
-	margin: auto;
+	/* margin: auto; */
+	margin: 0;
 	padding: 20px;
-	max-width: 65ch;
 	text-align: left;
 	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
 	color: #444;
+	min-height: calc(100vh - 40px);
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+@media (orientation: portrait) {
+	body {
+		max-width: 65ch;
+	}
 }
 h1,
 h2,
