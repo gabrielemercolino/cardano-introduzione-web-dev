@@ -5,11 +5,11 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-/* const posts = (await Astro.glob("./prima-parte/*.{md,mdx}")).sort(
+const posts = (await Astro.glob("./avanzato/*.{md,mdx}")).sort(
 	(a, b) =>
 		new Date(a.frontmatter.pubDate).valueOf() -
 		new Date(b.frontmatter.pubDate).valueOf()
-); */
+);
 ---
 
 <!DOCTYPE html>
@@ -34,8 +34,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main>🛠️ working on it 🛠️</main>
+		<Header /><main>
+			<section>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<a href={post.url}>{post.frontmatter.title}</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
 		<Footer />
 	</body>
 </html>
