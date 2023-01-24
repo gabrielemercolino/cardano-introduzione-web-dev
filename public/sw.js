@@ -2,7 +2,7 @@
 
 // Perform install steps
 let CACHE_NAME = "cardano-web-dev-cache";
-let urlsToCache = [];
+let urlsToCache = ["/web-dev.png"];
 
 self.addEventListener("install", function (event) {
 	// Perform install steps
