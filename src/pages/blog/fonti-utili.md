@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Riferimenti utili"
 description: "qualche riferimento utile"
 pubDate: "Jan 24 2023"
-heroImage: "https://www.digiantmedia.com/wp-content/uploads/2020/10/professional-web-design-and-custom-web-development-services-in-dubai.png"
+heroImage: "/web-dev.png"
 ---
 
 Imparare a sviluppare nel web, anche se si tratta di fare una _'semplice'_ pagina web può essere frustrante se si inizia da 0 senza una guida. Spesso si finisce per abbandonare perchè le risorse online in italiano sono poche oppure ci si imbatte in un qualcosa di troppo avanzato e ci si demoralizza.
