@@ -31,6 +31,6 @@
 	],
 	"theme_color": "#efefef",
 	"background_color": "#efefef",
-	"display": "minimal-ui",
+	"display": "fullscreen",
 	"orientation": "portrait"
 }
