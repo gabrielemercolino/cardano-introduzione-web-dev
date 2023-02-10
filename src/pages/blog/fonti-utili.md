@@ -47,4 +47,4 @@ In questo canale, utile per la parte **avanzata**, è una risorsa molto utile pe
 
 ### [Theo - t3.gg](https://www.youtube.com/user/thebigbib)
 
-QUesto canale offre contenuti incentrati nello sviluppo di vere e proprie applicazioni web. Va da sè che è suggerito come supporto alla parte **avanzata**
+Questo canale offre contenuti incentrati nello sviluppo di vere e proprie applicazioni web. Va da sè che è suggerito come supporto alla parte **avanzata**
