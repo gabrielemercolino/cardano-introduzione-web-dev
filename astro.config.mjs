@@ -7,6 +7,12 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: "Cardano web dev",
+			locales: {
+				root: {
+					label: "Italiano",
+					lang: "it-IT",
+				},
+			},
 			social: {
 				github: "https://github.com/gabrielemercolino",
 			},
